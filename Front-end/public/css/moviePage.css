@@ -1,0 +1,56 @@
+.add_movie_btn {
+    background-color: #4882e3;
+    color: white;
+    padding: 7px 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    font-family: system-ui;
+}
+
+.add_to_list_btns_moviePage {
+    padding: 10px;
+    text-align: center;
+}
+
+.add_movie_btn:hover {
+    background-color: rgb(0, 112, 177);
+}
+
+.movieInfoRating::before {
+    content: "Rating: ";
+  }
+
+.movieInfoRating {
+    background-color: #4882e3;
+    color: white;
+    font-weight: bold;
+    min-width: 25px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.movieInfoName {
+    font-weight: bold;
+    font-size: xx-large;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-variant: small-caps;
+}
+
+.movieInfoDesc {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.movieInfoImg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+    max-width: 100%;
+}
+
+  

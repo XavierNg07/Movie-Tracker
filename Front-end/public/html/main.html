@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/nav-bar.css" rel='stylesheet'>
+    <link href="../css/all.css" rel="stylesheet"/>
+    <link href="../css/mobile-main.css" rel="stylesheet"/>
+</head>
+<body onload="displayDefaultMovies()">
+    <nav id="navbar">
+        <span>
+            <a class="navButton" id="adminPage" href="main.html">Home</a>
+        </span>
+        <span>
+            <a class="navButton" id="adminPage" href="admin_stats.html">Admin</a>
+        </span>
+        <span>
+            <a class="navButton" id="profilePage" href="profile.html">Profile</a>
+        </span>
+        <span>
+            <a class="navButton" id="logOut" onclick="logout()">Logout</a>
+        </span>
+    </nav>
+
+
+    <h2>Welcome to Home Page</h2>
+    <p id="errorLog"></p>
+    <div id="searchContainer">
+
+        <form id="searchForm" action="">
+            <input id='searchbar' placeholder="Search" type="search">
+        </form>
+
+        <div id="movieCategory">
+            <button id="currentCategory">Popular</button>
+            <div id="dropdownOptions">
+                <p id="optionPopular">Popular</p>
+                <p id="optionTopRated">Top Rated</p>
+                <p id="optionNowPlaying">Now Playing</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="movieLists">
+        
+    </div>
+    <div id="noResult">No Results</div>
+</body>
+<script src="../resources/string_messages.js"></script>
+<script src="../resources/global.js"></script>
+<script src="../js/logout.js"></script>
+<script src="../js/index.js"></script>
+</html>

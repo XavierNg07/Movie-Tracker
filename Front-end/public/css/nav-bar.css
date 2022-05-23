@@ -1,0 +1,36 @@
+/** Nav Bar */
+#navbar {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4882e3;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+  }
+  
+  
+  .navButton{
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+    line-height: 100%;
+    cursor: pointer;
+  }
+  
+  
+  #navbar span {
+    height: 100%;
+    padding: 10px;
+  }
+  
+  #navbar span:hover {
+    background-color: #41414167;
+  }
+  

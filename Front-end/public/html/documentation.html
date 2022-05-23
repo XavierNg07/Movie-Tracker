@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/documentation.css" rel="stylesheet"/>
+  </head>
+  <body>
+  <h1>Movie Tracker</h1>
+    <div class="app-desc">This is a COMP 4537 group project. This Movie API helps users keep track of their favorite movies.</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
+    <div class="app-desc">Version: 1.1.0</div>
+    <div class="app-desc">BasePath:/API/V1</div>
+    <div class="license-info">All rights reserved</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Admin">Admin</a></h4>
+  <ul>
+  <li><a href="#getAdminStats"><code><span class="http-method">get</span> /admin</code></a></li>
+  </ul>
+  <h4><a href="#FavoriteList">FavoriteList</a></h4>
+  <ul>
+  <li><a href="#addFavoriteMovie"><code><span class="http-method">post</span> /favoritelist</code></a></li>
+  <li><a href="#getFavoriteMovieList"><code><span class="http-method">get</span> /favoritelist</code></a></li>
+  <li><a href="#removeFavMovieList"><code><span class="http-method">delete</span> /favoritelist/{id}</code></a></li>
+  </ul>
+  <h4><a href="#User">User</a></h4>
+  <ul>
+  <li><a href="#changePassword"><code><span class="http-method">patch</span> /changePassword</code></a></li>
+  <li><a href="#createUser"><code><span class="http-method">post</span> /signUp</code></a></li>
+  <li><a href="#loginOutUser"><code><span class="http-method">post</span> /logout</code></a></li>
+  <li><a href="#loginUser"><code><span class="http-method">post</span> /login</code></a></li>
+  <li><a href="#profileUser"><code><span class="http-method">get</span> /profile</code></a></li>
+  </ul>
+  <h4><a href="#WatchList">WatchList</a></h4>
+  <ul>
+  <li><a href="#addWatchMovie"><code><span class="http-method">post</span> /watchlist</code></a></li>
+  <li><a href="#getMovieList"><code><span class="http-method">get</span> /watchlist</code></a></li>
+  <li><a href="#removeMovieList"><code><span class="http-method">delete</span> /watchlist/{id}</code></a></li>
+  </ul>
+
+  <h1><a name="Admin">Admin</a></h1>
+  <div class="method"><a name="getAdminStats"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /admin</code></pre></div>
+    <div class="method-summary">Display all total amount of request sent to all URI (<span class="nickname">getAdminStats</span>)</div>
+    <div class="method-notes">Returns a list of objects. Each contains information on each URI and the amount of request sent to them.</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#EndpointsObj">EndpointsObj</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{"empty": false}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    successful operation
+        <a href="#EndpointsObj">EndpointsObj</a>
+    <h4 class="field-label">400</h4>
+    Invalid status value
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="FavoriteList">FavoriteList</a></h1>
+  <div class="method"><a name="addFavoriteMovie"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /favoritelist</code></pre></div>
+    <div class="method-summary">Add a movie to the user's favorite-list (<span class="nickname">addFavoriteMovie</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#Movie">Movie</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Movie object that needs to be added to the favorite list. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+    <h4 class="field-label">409</h4>
+    Conflict
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getFavoriteMovieList"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /favoritelist</code></pre></div>
+    <div class="method-summary">Grab all the movies inside the user's favorite-list (<span class="nickname">getFavoriteMovieList</span>)</div>
+    <div class="method-notes">A user can have multiple movies inside their favorite-list. This URI will grab them all and return a json.</div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="removeFavMovieList"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /favoritelist/{id}</code></pre></div>
+    <div class="method-summary">Delete the currently selected favorite list item. (<span class="nickname">removeFavMovieList</span>)</div>
+    <div class="method-notes">Allow users to remove a movie in their favorite list.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The id of the movie you want to delete. </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="User">User</a></h1>
+  <div class="method"><a name="changePassword"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="patch"><code class="huge"><span class="http-method">patch</span> /changePassword</code></pre></div>
+    <div class="method-summary">Change the password of user. (<span class="nickname">changePassword</span>)</div>
+    <div class="method-notes">Enter a new password and alter the user's password on the database.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">password (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The password for login in clear text </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      String
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "bytes": [],
+  "empty": true
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    successful
+        <a href="#String">String</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createUser"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /signUp</code></pre></div>
+    <div class="method-summary">Create a new user (<span class="nickname">createUser</span>)</div>
+    <div class="method-notes">Add a new user to the database and grant them authentication to the website.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">username (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The user name for sign up </div><div class="param">password (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The password for sign up </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+    <h4 class="field-label">409</h4>
+    Conflict
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="loginOutUser"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /logout</code></pre></div>
+    <div class="method-summary">Logs the user out of the website (<span class="nickname">loginOutUser</span>)</div>
+    <div class="method-notes">Clear the cookies the authorizes the user on our website.</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      String
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "bytes": [],
+  "empty": true
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    successful
+        <a href="#String">String</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="loginUser"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /login</code></pre></div>
+    <div class="method-summary">Logs user into the website (<span class="nickname">loginUser</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">username (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The user name for login </div><div class="param">password (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The password for login in clear text </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      String
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "bytes": [],
+  "empty": true
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    successful
+        <a href="#String">String</a>
+    <h4 class="field-label">401</h4>
+    Unauthorized
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="profileUser"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /profile</code></pre></div>
+    <div class="method-summary">Get user information for the profile page. (<span class="nickname">profileUser</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      
+      String
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "bytes": [],
+  "empty": true
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    successful
+        <a href="#String">String</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="WatchList">WatchList</a></h1>
+  <div class="method"><a name="addWatchMovie"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /watchlist</code></pre></div>
+    <div class="method-summary">Add a movie to the user's watch-list (<span class="nickname">addWatchMovie</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#Movie">Movie</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Movie object that needs to be added to the watch list. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+    <h4 class="field-label">409</h4>
+    Conflict
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getMovieList"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /watchlist</code></pre></div>
+    <div class="method-summary">Grab all the movies inside the user's watch-list (<span class="nickname">getMovieList</span>)</div>
+    <div class="method-notes">A user can have multiple movies inside their watch-list. This URI will grab them all and return a json.</div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="removeMovieList"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /watchlist/{id}</code></pre></div>
+    <div class="method-summary">Delete the currently selected watch list item. (<span class="nickname">removeMovieList</span>)</div>
+    <div class="method-notes">Allow users to remove a movie in their watch list.</div>
+
+    <h3 class="field-label">Path parameters</h3>
+    <div class="field-items">
+      <div class="param">id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash; The id of the movie you want to delete. </div>
+    </div>  <!-- field-items -->
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Success
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#Endpoint"><code>Endpoint</code> - </a></li>
+    <li><a href="#EndpointsObj"><code>EndpointsObj</code> - </a></li>
+    <li><a href="#Movie"><code>Movie</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="Endpoint"><code>Endpoint</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span>  format: int64</div>
+          <div class="param-desc"><span class="param-type">example: 12</span></div>
+<div class="param">method (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: GET</span></div>
+<div class="param">api (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: /API/V1/watchList</span></div>
+<div class="param">requests (optional)</div><div class="param-desc"><span class="param-type"><a href="#long">Long</a></span>  format: int64</div>
+          <div class="param-desc"><span class="param-type">example: 25</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="EndpointsObj"><code>EndpointsObj</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">endpoint (optional)</div><div class="param-desc"><span class="param-type"><a href="#Endpoint">array[Endpoint]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Movie"><code>Movie</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">watchlist_id </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Spider-Man: No Way Home</span></div>
+<div class="param">overview </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Spider-Man got lost in NYC subway</span></div>
+<div class="param">posterPath </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: https://image.tmdb.org/t/p/w154//4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg</span></div>
+<div class="param">rating </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 6.9</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>

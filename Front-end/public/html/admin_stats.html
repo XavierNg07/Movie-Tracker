@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Stats Page</title>
+    <link href="../css/nav-bar.css" rel='stylesheet'>
+    <link href="../css/all.css" rel="stylesheet" />
+    <link href="../css/mobile-stats.css" rel="stylesheet" />
+</head>
+
+<body onload="GETStats()">
+    <nav id="navbar">
+        <span>
+            <a class="navButton" id="" href="main.html">Home</a>
+        </span>
+        <span>
+            <a class="navButton" id="adminPage" href="admin_stats.html">Admin</a>
+        </span>
+        <span>
+            <a class="navButton" id="profilePage" href="profile.html">Profile</a>
+        </span>
+        <span>
+            <a class="navButton" id="logOut" onclick="logout()">Logout</a>
+        </span>
+    </nav>
+    <table id="stats">
+        <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Requests</th>
+        </tr>
+    </table>
+    <ul id="adminErrorLog"></ul>
+
+</body>
+<script src="../resources/string_messages.js"></script>
+<script src="../resources/global.js"></script>
+<script src="../js/logout.js"></script>
+<script src='../js/admin.js'></script>
+
+</html>

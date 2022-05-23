@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../css/nav-bar.css" rel='stylesheet'>
+        <link type="text/css" rel="stylesheet" href="../css/profile.css">
+        <link href="../css/mobile-main.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+    </head>
+    <body onload="">
+        <nav id="navbar">
+            <span>
+                <a class="navButton" id="adminPage" href="main.html">Home</a>
+            </span>
+            <span>
+                <a class="navButton" id="adminPage" href="admin_stats.html">Admin</a>
+            </span>
+            <span>
+                <a class="navButton" id="profilePage" href="profile.html">Profile</a>
+            </span>
+            <span>
+                <a class="navButton" id="logOut" onclick="logout()">Logout</a>
+            </span>
+        </nav>
+        <div id="username"></div>
+
+        <div id="listContainer">
+            <span class="listButton" onclick="directWatchList()">Watch List</span>
+            <span class="listButton" onclick="directFavoriteList()">Favorite List</span>
+        </div>
+
+        <form id="newPasswordForm">
+            <input id="newPassword" placeholder="New Password" type="text">
+            <input id="submitPwd" type='submit' value="Change">
+        </form>
+        <div id="log"></div>
+        <ul id="profileErrorLog"></ul>
+
+    </body>
+    <script src="../resources/string_messages.js"></script>
+    <script src="../resources/global.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/profile.js"></script>
+</html>

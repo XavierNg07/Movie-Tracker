@@ -1,0 +1,220 @@
+body {
+  font-family: system-ui;
+  text-align: center;
+  margin: 0px;
+}
+
+
+#stats {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translate(-50%,10%);
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    width: 500px;
+  }
+
+.movielist{
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#errorLog {
+    color: red;
+    display: none;
+}
+
+#adminErrorLog {
+  display: none;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  top: 50px;
+  border: none;
+
+}
+
+#adminErrorLog  li {
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  border: none;
+  text-align: left;
+}
+
+#movieLists {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.movielist_remove_btn{
+  text-align: center;
+  border-radius: 1%;
+  background-color: red;
+  cursor: pointer;
+  content: "Remove";
+}
+
+.movieItem {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  width: 155px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  background-color: #f9f9f9;
+  position:relative;
+}
+
+.movieItem:hover .movieItemShadow {
+  display: block;
+}
+
+.movieItemShadow {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #41414167;
+  cursor: pointer;
+}
+
+.movieItemRating {
+  background-color: #4882e3;
+    color: white;
+    font-weight: bold;
+    min-width: 15px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#movieInfo_container {
+  border: 1px solid black ;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+#currentCategory {
+  background-color: #4882e3;
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#movieCategory {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#movieCategory:hover #dropdownOptions {
+  display: block;
+}
+
+#dropdownOptions {
+  min-width: 185px;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: white;
+  right: 0;
+
+}
+
+#dropdownOptions p {
+  text-align: center;
+  margin: 0;
+  padding: 16px;
+  cursor: pointer;
+}
+
+#dropdownOptions p:hover {
+  background-color: aliceblue;
+}
+
+#searchbar {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #e4e4e4;
+  width: 100%;
+}
+
+#searchForm {
+  flex: 2;
+}
+
+#searchContainer {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#noResult {
+  border-radius: 5px;
+  color: white;
+  background-color: #e72828fa;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 1px 1px 5px grey;
+  display: block;
+  margin: 50px auto auto auto;
+  width: fit-content;
+}
+
+.movieInfoRating::before {
+  content: "Rating: ";
+}
+
+#errorList {
+  background-color: red;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  #Title {
+    font-size: 300%;
+  }
+
+  #logInSignUp {
+    font-size: 200%;
+    margin: 2.5%;
+  }
+
+  label,
+  input {
+    font-size: large;
+  }
+
+  #backToMovies {
+    font-size: x-large;
+  }
+}
